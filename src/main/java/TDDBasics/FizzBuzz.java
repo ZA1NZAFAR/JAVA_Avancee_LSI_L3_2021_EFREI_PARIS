@@ -2,10 +2,11 @@ package TDDBasics;
 
 public class FizzBuzz {
     public String check(int i) {
+        String result = "";
         if (i % 3 == 0)
-            return "Fizz";
+            result += "Fizz";
         if (i % 5 == 0)
-            return "Buzz";
-        return String.valueOf(i);
+            result += "Buzz";
+        return (result.equals("")) ? Integer.toString(i) : result;
     }
 }
