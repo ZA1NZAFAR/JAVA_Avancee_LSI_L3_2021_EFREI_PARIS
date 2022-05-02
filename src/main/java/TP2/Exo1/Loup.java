@@ -1,4 +1,4 @@
-package TP2;
+package TP2.Exo1;
 
 public class Loup {
     private String nom;
