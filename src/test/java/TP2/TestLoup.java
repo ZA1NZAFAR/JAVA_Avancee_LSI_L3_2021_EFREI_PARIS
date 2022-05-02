@@ -15,7 +15,7 @@ public class TestLoup {
     }
 
     @Test
-    public void testDirectionNord() {
+    public void testDirectionNordDefault() {
         assertEquals(loup.getOrientation(), Orientation.NORD);
     }
 
@@ -41,7 +41,7 @@ public class TestLoup {
     }
 
     @Test
-    public void testDirectionNord2() {
+    public void testDirectionReturnNord() {
         loup.turnClockwise();
         loup.turnClockwise();
         loup.turnClockwise();
