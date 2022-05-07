@@ -18,16 +18,6 @@ public class BowlingFrameLast extends BowlingFrame {
     }
 
     @Override
-    public void setFirstThrow(int firstThrow) {
-        if (firstThrow < 0 || firstThrow > 10) {
-            throw new IllegalArgumentException("Le premier lancer doit être compris entre 0 et 10");
-        } else {
-            this.firstThrow = firstThrow;
-        }
-    }
-
-
-    @Override
     public void setSecondThrow(int secondThrow) {
         if (secondThrow < 0 || secondThrow > 10)
             throw new IllegalArgumentException("Le deuxième lancer doit être compris entre 0 et 10");
@@ -47,12 +37,12 @@ public class BowlingFrameLast extends BowlingFrame {
     }
 
     @Override
-    public boolean isStrike() {
+    public boolean isStrike() { // on ne prend pas en compte les strikes dans le dernier tour, car ils sont déjà pris en compte dans le score
         return false;
     }
 
     @Override
-    public boolean isSpare() {
+    public boolean isSpare() { // on ne prend pas en compte les spares dans le dernier tour, car ils sont déjà pris en compte dans le score
         return false;
     }
 
