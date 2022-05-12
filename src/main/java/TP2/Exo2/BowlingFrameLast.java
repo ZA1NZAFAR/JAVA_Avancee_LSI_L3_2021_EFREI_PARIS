@@ -36,7 +36,7 @@ public class BowlingFrameLast extends BowlingFrame {
             this.secondThrow = secondThrow;
     }
 
-    // Le trosième lancé n'est autorisé que dans le cas d'un strike (prbl au niveau du premier "else if" ????)
+    // Le troisième lancé n'est autorisé que dans le cas d'un strike
     public void setThirdThrow(int thirdThrow) {
         if (thirdThrow < 0 || thirdThrow > 10)
             throw new IllegalArgumentException("Le troisième lancer doit être compris entre 0 et 10");
