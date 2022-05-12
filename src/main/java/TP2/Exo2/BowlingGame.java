@@ -3,10 +3,12 @@ package TP2.Exo2;
 import java.util.ArrayList;
 import java.util.List;
 
+// On définit la partie de bowling comme étant un ensemble de frames (10 au total)
 public class BowlingGame {
     int index;
     List<BowlingFrame> frames;
 
+    // Chaque frame est un ensemble de 2 voire 3 lancés par le joueur
     public BowlingGame() {
         frames = new ArrayList<>();
     }
@@ -16,7 +18,7 @@ public class BowlingGame {
     }
 
 
-    //avant d'inserer un nouveau frame, on verifie que le nombre de frame n'est pas atteint (10)
+    //avant d'inserer un nouveau frame, on verifie que le nombre de frames maximum n'est pas atteint (10)
     //on verifie que le dernier frame est bien un frameLast (qui ne peut pas avoir de bonus)
     public void enregisterFrame(BowlingFrame frame) {
         if (frames.size() >= 10)
@@ -37,6 +39,8 @@ public class BowlingGame {
         }
         return score;
     }
+
+    // On définit les règles établies en tête de page de la classe BowlingFrame décrivant une partie de Bowling :
 
     public void calculateBonuses() {
         for (int i = 0; i < frames.size(); i++) {
