@@ -1,5 +1,6 @@
 package TP3.Exo2;
 
+// Enoncé :
 public class Couple<T> {
     private T x, y;
 

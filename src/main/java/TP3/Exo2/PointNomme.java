@@ -1,6 +1,6 @@
 package TP3.Exo2;
 
-//La classe PointNomme n'est pas generique mais la class Couple est generique et donc on peut l'utiliser avec des types differents
+//La classe PointNomme n'est pas generique mais la classe Couple est generique et donc on peut l'utiliser avec des types differents
 public class PointNomme extends Couple<Integer> {
     private String nom;
 

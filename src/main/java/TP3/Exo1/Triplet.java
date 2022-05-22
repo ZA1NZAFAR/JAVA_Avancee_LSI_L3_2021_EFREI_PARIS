@@ -6,11 +6,14 @@ public class Triplet<T> {
     private T second;
     private T troisieme;
 
+    // Constructeur :
     public Triplet(T premier, T second, T troisieme) {
         this.premier = premier;
         this.second = second;
         this.troisieme = troisieme;
     }
+
+// Ensemble de getters & setters :
 
     public T getPremier() {
         return premier;
@@ -36,8 +39,8 @@ public class Triplet<T> {
         this.troisieme = troisieme;
     }
 
-    @Override
-    public String toString() {
+
+    public String affiche() {
         return "Triplet{" + "premier=" + premier + ", second=" + second + ", troisieme=" + troisieme + '}';
     }
 }
