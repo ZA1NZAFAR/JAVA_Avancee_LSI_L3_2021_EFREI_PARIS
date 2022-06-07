@@ -8,6 +8,7 @@ import java.util.Scanner;
 // Server class
 class Server {
     public static void main(String[] args) {
+        int nbClients = 0;
         ServerSocket server = null;
         // on observe qu'il y a la mise en place commune d'un port de communication faisant intervenir un socket de communication entre la partie cliente et serveur :
         try {
@@ -18,13 +19,12 @@ class Server {
 
                 // Dès lors que la connexion a été établie => affichage des infos concernant le client :
                 Socket client = server.accept();
+                nbClients++;
 
-
-                System.out.println("New client connected" + client.getInetAddress().getHostAddress());
+                System.out.println("New client connected with ipAddress : " + client.getInetAddress().getHostAddress() + " nbClients : " + nbClients);
 
                 //Cas de la mise en place d'un thread qui va s'occuper de la mise en place du client à part, indépendamment de la partie serveur :
-                ClientHandler clientSock
-                        = new ClientHandler(client);
+                ClientHandler clientSock = new ClientHandler(client);
 
                 new Thread(clientSock).start();
             }
