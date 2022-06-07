@@ -8,6 +8,7 @@ import java.util.Scanner;
 // Server class
 class Server {
     public static void main(String[] args) {
+        int nbClients = 0;
         ServerSocket server = null;
         try {
             server = new ServerSocket(8080);
@@ -16,13 +17,12 @@ class Server {
             while (true) {
 
                 Socket client = server.accept();
+                nbClients++;
 
-
-                System.out.println("New client connected" + client.getInetAddress().getHostAddress());
+                System.out.println("New client connected with ipAddress : " + client.getInetAddress().getHostAddress() + " nbClients : " + nbClients);
 
                 // create a new thread object
-                ClientHandler clientSock
-                        = new ClientHandler(client);
+                ClientHandler clientSock = new ClientHandler(client);
 
                 // This thread will handle the client
                 // separately
@@ -41,7 +41,7 @@ class Server {
         }
     }
 
-    // ClientHandler class
+    // Thread class
     private static class ClientHandler implements Runnable {
         private final Socket clientSocket;
 

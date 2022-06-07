@@ -36,8 +36,17 @@ class Client {
             out.println(line);
             out.flush();
 
+
+            // reading from server
+            String response = in.readLine();
+
             // displaying server reply
-            System.out.println("Server replied " + in.readLine());
+            System.out.println("Server replied " + response);
+            if (response.equals("OK!")) {
+                System.out.println("Vous êtes connecté");
+            } else {
+                System.out.println("Vous n'êtes pas connecté");
+            }
 
 
             // closing the scanner object
