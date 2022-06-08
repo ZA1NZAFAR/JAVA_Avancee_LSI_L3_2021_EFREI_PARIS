@@ -3,6 +3,8 @@ package TP4.Exo2.avecThreadNoSync;
 import TP4.Exo2.Person;
 import TP4.Exo2.Task;
 
+// Comme les threads ne sont pas synchronisés, les tâches sont réalisées de façon indéterminée, pas forcément dans l'ordre dans lequel on les a écrit
+
 public class MainAvecThreadsSansSync {
     public static void main(String[] args) {
         Person person = new Person("Marwan");
