@@ -2,6 +2,7 @@ package TP4.Exo2;
 
 import java.util.HashMap;
 
+//On définit la classe personne contenant les informations relatives à l'étudiant :
 
 public class Person {
     private String name;
@@ -11,10 +12,13 @@ public class Person {
         this.name = name;
         this.activities = new HashMap<>();
 
+        //task est une énumération qui contient l'ensemble des valeurs que peut prendre "task"
         for (Task task : Task.values()) {
             activities.put(task, false);
         }
     }
+
+    // on définit les différents cas possibles selon la valeur de task:
 
     public void doActivity(Task task) {
         switch (task) {
