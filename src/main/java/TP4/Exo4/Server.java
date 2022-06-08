@@ -21,7 +21,7 @@ class Server {
                 Socket client = server.accept();
                 nbClients++;
 
-                System.out.println("New client connected with ipAddress : " + client.getInetAddress().getHostAddress() + " nbClients : " + nbClients);
+                System.out.println("New client connected with ipAddress : " + client.getInetAddress().getHostAddress() + "|  nbClients connectes : " + nbClients);
 
                 //Cas de la mise en place d'un thread qui va s'occuper de la mise en place du client à part, indépendamment de la partie serveur :
                 ClientHandler clientSock = new ClientHandler(client);
