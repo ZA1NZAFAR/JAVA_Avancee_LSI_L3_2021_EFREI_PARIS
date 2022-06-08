@@ -1,10 +1,12 @@
-package TP4.Exo3.Z;
+package TP4.Exo3;
 
+// on définit la structure générale que suivra la définition d'un employé
 public class Employee {
     private String name;
     private String post;
     private int salary;
 
+    // Le constructeur, les getters & setters :
     public Employee(String name, String post, int salary) {
         this.name = name;
         this.post = post;

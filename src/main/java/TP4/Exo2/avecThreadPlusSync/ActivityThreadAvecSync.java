@@ -2,6 +2,7 @@ package TP4.Exo2.avecThreadPlusSync;
 
 import TP4.Exo2.Person;
 import TP4.Exo2.Task;
+// la synchronisation des activités dans les threads nécessite la prise en compte des tâches, de leur acheminement et priorité.
 
 public class ActivityThreadAvecSync implements Runnable {
     Person person;

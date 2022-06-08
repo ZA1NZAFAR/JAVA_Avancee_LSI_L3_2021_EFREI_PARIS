@@ -3,6 +3,7 @@ package TP4.Exo2.avecThreadPlusSync;
 import TP4.Exo2.Task;
 import TP4.Exo2.Person;
 
+// Comme les threads ont été définis en prenant en compte la synchronisation, on peut observer que chacun des appels suivants se réalisent dans l'ordre indiqué :
 public class MainThreadPlusSync {
     public static void main(String[] args) {
         Person person = new Person("Marwan");
